@@ -77,8 +77,7 @@ export default function HomeScreen(){
                     <Product key={product._id} product={product}></Product>
                     ))} */}
                     
-                    {
-                    products.map((product, index) => {
+                    {products.map((product, index) => {
                         if(category === ''){
                             return <Product key={product._id} product={product}></Product>
                         } else {
