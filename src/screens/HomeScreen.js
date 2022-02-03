@@ -23,7 +23,8 @@ export default function HomeScreen(){
         }
         const fetchData = async () => {
             try {
-                const {data} = await axios.get('/api/products');
+                //const {data} = await axios.get('/api/products');
+                const {data} = await axios.get('https://mercaditobackend.herokuapp.com/api/products');
                 setProducts(data)
                 
             } catch (err) {
