@@ -24,7 +24,7 @@ export default function ProductScreen(props) {
     
     const fetchData = async () => {
       try {
-          const {data} = await axios.get('https://mercaditobackend.herokuapp.com/api/products/id');
+          const {data} = await axios.get(`https://mercaditobackend.herokuapp.com/api/products/${id}`);
           setProducts(data)
           
       } catch (err) {
