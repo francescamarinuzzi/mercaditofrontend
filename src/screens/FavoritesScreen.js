@@ -32,7 +32,7 @@ export default function FavoritesScreen(props) {
                 //     }
                 // }
                
-                const {data} = await axios.get('/api/users/favorites',
+                const {data} = await axios.get('https://mercaditobackend.herokuapp.com/api/users/favorites',
                 {
                     user,
                     
