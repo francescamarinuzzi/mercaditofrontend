@@ -24,7 +24,7 @@ export default function ProductScreen(props) {
     
     const fetchData = async () => {
       try {
-          const {data} = await axios.get('https://mercaditobackend.herokuapp.com/api/products');
+          const {data} = await axios.get('https://mercaditobackend.herokuapp.com/api/products/:id');
           setProducts(data)
           
       } catch (err) {
@@ -41,7 +41,7 @@ export default function ProductScreen(props) {
   console.log(id)
   const product = products.find((x) => x._id === id);
   if (!product) {
-    return <div> Product Not Found</div>;
+    return <div> Product Not Found </div>;
   }
   const addToFavoritesHandler = async (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ export default function ProductScreen(props) {
 
           
 
-        const {data} = await axios.put('https://mercaditobackend.herokuapp.com/api/users/favorites', 
+        const {data} = await axios.put('https://mercaditobackend.herokuapp.com/api/users/favorites',
         {
           user,
           id
