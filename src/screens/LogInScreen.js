@@ -21,7 +21,7 @@ export default function LogInScreen(){
 
            
 
-            const {data} = await axios.post('/api/users/login', 
+            const {data} = await axios.post('https://mercaditobackend.herokuapp.com/api/users/login', 
             {
                 email,
                 password

@@ -22,7 +22,7 @@ export default function SignUpScreen(){
 
            
 
-            const {data} = await axios.post('/api/users/signup', 
+            const {data} = await axios.post('https://mercaditobackend.herokuapp.com/api/users/signup', 
             {
                 name,
                 email,
